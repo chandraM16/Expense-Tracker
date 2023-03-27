@@ -1,38 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  border: 1px solid #dadada;
+  border-radius: 0.5rem;
+  max-width: 30rem;
+  width: 30rem;
+  margin: 0.5rem;
+  height: 38rem;
+  padding: 0.5rem;
+  background-color: beige;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance_cont {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.balance_box {
+  text-align: left;
+  width: 90%;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.income_expense_box {
+  /* border: 1px solid black; */
+  width: 90%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.income_box {
+  border-right: 1px solid black;
+  width: 50%;
+}
+.income {
+  color: rgb(8, 198, 8);
+}
+.expense_box {
+  width: 50%;
+}
+.expense {
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
+.history_cont {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.history_cont h3 {
+  text-align: left;
+  padding-bottom: 1rem;
+  width: 90%;
+  border-bottom: 1px solid black;
+}
+.expense_bar_cont {
+  width: 90%;
+  max-height: 9rem;
+  overflow: auto;
+  min-height: 9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.expense_bar_cont::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.expense_bar_cont {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.expense_bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.9rem 0;
+  height: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.2rem;
+}
+.expense_close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.expense_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98.5%;
+  padding: 0 0.5rem;
+  background-color: white;
+  height: 100%;
+  border-bottom-left-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+}
+
+.right_box {
+  width: 1.5%;
+  /* background-color: gold; */
+  height: 100%;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.transaction_cont {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.transaction_cont h3 {
+  text-align: left;
+  padding-bottom: 1rem;
+  width: 90%;
+  border-bottom: 1px solid black;
+}
+.input_box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.input_box label {
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+.input_box input {
+  margin-top: 0.3rem;
+  height: 1.8rem;
+  width: 70%;
+  text-align: center;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input_box input:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.amount_input::-webkit-outer-spin-button,
+.amount_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.amount_input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.btn {
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  height: 1.8rem;
+  width: 70%;
+  text-align: center;
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #9797eb;
 }
